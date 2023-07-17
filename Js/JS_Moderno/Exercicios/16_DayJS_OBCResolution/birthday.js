@@ -12,7 +12,7 @@ function birthday(date) {
 
     console.log(`Idade: ${ageInYears} anos`);
     console.log(`Próximo aniversário: ${nextBirthday.format("DD/MM/YYYY")}`);
-    console.log(`Faltam ${daysToNextBirthday} para completar ${ageInYears + 1} anos`);
+    console.log(`Faltam ${daysToNextBirthday} dia para completar ${ageInYears + 1} anos`);
 }
 
-birthday("1997-03-17")
+birthday("1997-07-19")

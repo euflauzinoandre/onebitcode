@@ -5,7 +5,7 @@ console.log(...towns)
 console.log(...towns[0])
 
 //Uma cópia do original
-//Mas tudo o que é alterador nela afeta o original
+//Mas tudo o que é alterado nela afeta o original
 const townsCopy = towns
 
 townsCopy.pop()

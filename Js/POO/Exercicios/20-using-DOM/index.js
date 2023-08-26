@@ -1,27 +1,23 @@
-import { Component } from "./Component.js"
-import { Form } from "./Form.js"
-import { Input } from "./Input.js"
-import { Label } from "./Label.js"
+import { Component } from "./Component.js";
+import { Input } from "./Input.js";
+import { Label } from "./Label.js";
+import { Form } from "./Form.js";
 
-const el = new Component("h1", "body", { innetText: "Olá, mundo!" })
-console.log(el);
-
-el.tag = "h2"
-el.build().render()
+const title = new Component('h1', 'body', { innerText: 'Hello, World!' })
+console.log(title)
+title.build().render()
 
 const form = new Form('body')
 
-const label = new Label("Nome: ", form, { htmlFor: "nameInput" })
-const input = new Input(form, { id: "nameInput", name: "nameInput" })
+const label = new Label('Nome: ', form, { htmlFor: 'nameInput' })
+const input = new Input(form, { id: 'nameInput', name: 'nameInput' })
 
+form.addChildren(label, input)
 form.render()
-
-label.render()
-form.addChildren(input)
 
 form.addChildren(
     new Component('br'),
     new Component('br'),
-    new Label("Data de nascimento: ", { htmlFor: "birthdayInput" }),
-    new Input(form, { id: "birthdayInput", name: "birthday", type: "date" })
+    new Label('Data de Nascimento', form, { htmlFor: 'birthdayInput' }),
+    new Input(form, { id: 'birthdayInput', name: 'birthdayInput', type: 'date' })
 )
